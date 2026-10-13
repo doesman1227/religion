@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>宗教｜まとめノート</title>
-<meta name="description" content="人はなぜ祈るのか。アブラハムの宗教・インドの宗教・東アジアの宗教を見渡し、七つの宗教の教えと規律を同じ形式でまとめ、テーマごとに比べる宗教のノート。">
+<meta name="description" content="人はなぜ祈るのか。アブラハムの宗教・インドの宗教・東アジアの宗教を見渡し、十の宗教の教えと規律を同じ形式でまとめ、テーマごとに比べる宗教のノート。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
@@ -12,19 +12,19 @@
   :root{
     --bg:#fbfaf8; --ink:#191715; --muted:#77716a; --faint:#aaa39a;
     --line:#e6e1d8; --card:#f4f1eb; --accent:#8a6a3f;
-    --c-abraham:#6f86b8; --c-india:#c27a4a; --c-eastasia:#5f9a7e;
+    --c-abraham:#6f86b8; --c-india:#c27a4a; --c-eastasia:#5f9a7e; --c-iran:#a97cb8;
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
       --bg:#100f0e; --ink:#efece7; --muted:#958f85; --faint:#5f5a52;
       --line:#272421; --card:#181614; --accent:#c9a273;
-      --c-abraham:#8fa6d8; --c-india:#e09a6a; --c-eastasia:#7fbf9f;
+      --c-abraham:#8fa6d8; --c-india:#e09a6a; --c-eastasia:#7fbf9f; --c-iran:#c9a0d8;
     }
   }
   :root[data-theme="dark"]{
     --bg:#100f0e; --ink:#efece7; --muted:#958f85; --faint:#5f5a52;
     --line:#272421; --card:#181614; --accent:#c9a273;
-    --c-abraham:#8fa6d8; --c-india:#e09a6a; --c-eastasia:#7fbf9f;
+    --c-abraham:#8fa6d8; --c-india:#e09a6a; --c-eastasia:#7fbf9f; --c-iran:#c9a0d8;
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",system-ui,sans-serif;
@@ -53,7 +53,7 @@
   .points b{font-family:"Noto Serif JP",serif;font-weight:600;margin-right:.6em}
 
   .family{margin:0 0 34px;border-left:3px solid var(--fam);padding-left:18px}
-  .family.abraham{--fam:var(--c-abraham)} .family.india{--fam:var(--c-india)} .family.eastasia{--fam:var(--c-eastasia)}
+  .family.abraham{--fam:var(--c-abraham)} .family.india{--fam:var(--c-india)} .family.eastasia{--fam:var(--c-eastasia)} .family.iran{--fam:var(--c-iran)}
   .family h3{display:flex;align-items:baseline;gap:12px;font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.08rem;margin:0 0 4px}
   .family h3 small{font-family:"Noto Sans JP",sans-serif;font-weight:400;font-size:.72rem;letter-spacing:.16em;color:var(--faint)}
   .family > p{color:var(--muted);font-size:.92rem;margin:0 0 14px}
@@ -105,7 +105,7 @@
 
   <section>
     <h2>世界の宗教を見渡す</h2>
-    <p class="note">大きく三つの流れに分けると、関係がつかみやすい。それぞれのノートで、教えと規律を同じ形式で読み比べられます。</p>
+    <p class="note">大きく四つの流れに分けると、関係がつかみやすい。それぞれのノートで、教えと規律を同じ形式で読み比べられます。</p>
 
     <div class="family abraham">
       <h3>アブラハムの宗教<small>ABRAHAMIC</small></h3>
@@ -123,6 +123,8 @@
       <div class="rel">
         <a href="hinduism.html"><b>ヒンドゥー教</b><span>ヴェーダに始まる多様な信仰の総称。多くの神々と、それを貫く一つの真理。</span><em>ノートを読む →</em></a>
         <a href="../buddhism/"><b>仏教</b><span>ブッダが説いた、苦しみの原因を見きわめて手放す道。アジア全体へ広がった。</span><em>ノートを読む →</em></a>
+        <a href="jainism.html"><b>ジャイナ教</b><span>ブッダと同じ時代に生まれた、徹底した不殺生の宗教。</span><em>ノートを読む →</em></a>
+        <a href="sikhism.html"><b>シク教</b><span>15世紀のパンジャーブで生まれた。唯一の神と、身分や性別による差別のない平等を説く。</span><em>ノートを読む →</em></a>
       </div>
     </div>
 
@@ -135,7 +137,15 @@
       </div>
     </div>
 
-    <p class="tl">このほか、ゾロアスター教・ジャイナ教・シク教や、古代の神々への信仰もあります。<br><a href="../history-timeline/#cat=judaism,christianity,islam,hinduism,buddhism,confucian,shinto,otherrel">宗教の歴史をまとめて年表で見る →</a></p>
+    <div class="family iran">
+      <h3>イランの宗教<small>IRANIAN</small></h3>
+      <p>世界を善と悪の戦いとして描き、終末と最後の審判を語った。その考えは、のちの宗教にも影響を与えたと言われる。</p>
+      <div class="rel">
+        <a href="zoroastrianism.html"><b>ゾロアスター教</b><span>預言者ザラスシュトラの教え。善い思い・善い言葉・善い行いで、人は自ら善を選ぶ。</span><em>ノートを読む →</em></a>
+      </div>
+    </div>
+
+    <p class="tl">このほか、マニ教やバハイ教、古代の神々への信仰などもあります。<br><a href="../history-timeline/#cat=judaism,christianity,islam,hinduism,buddhism,confucian,shinto,otherrel">宗教の歴史をまとめて年表で見る →</a></p>
   </section>
 
   <section>
@@ -144,7 +154,7 @@
     <nav class="notes">
       <a href="compare.html">
         <span class="idx">00</span>
-        <span><span class="cat">COMPARE</span><span class="ttl">宗教を比べる</span><span class="desc">黄金律、戒め、祈り、断食、施し、食の決まり、巡礼、休む日、死のあと、担い手。七つの宗教を同じテーマで並べ、共通点と違いを見る。</span></span>
+        <span><span class="cat">COMPARE</span><span class="ttl">宗教を比べる</span><span class="desc">黄金律、戒め、祈り、断食、施し、食の決まり、巡礼、休む日、死のあと、担い手。十の宗教を同じテーマで並べ、共通点と違いを見る。</span></span>
         <span class="arrow">→</span>
       </a>
       <a href="judaism.html">
@@ -177,14 +187,29 @@
         <span><span class="cat">EARLY BUDDHISM</span><span class="ttl">原始仏教</span><span class="desc">釈迦が説いた最初の教えを、人間の精神の“最適解”として読む。苦と執着からメタ認知や認知バイアスまで、現代の視点で捉え直す。</span></span>
         <span class="arrow">→</span>
       </a>
-      <a href="confucianism-taoism.html">
+      <a href="jainism.html">
         <span class="idx">07</span>
+        <span><span class="cat">JAINISM</span><span class="ttl">ジャイナ教</span><span class="desc">徹底した不殺生。五つの誓戒、厳格な菜食と断食、白衣派と裸行派。</span></span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="sikhism.html">
+        <span class="idx">08</span>
+        <span><span class="cat">SIKHISM</span><span class="ttl">シク教</span><span class="desc">神はひとつ、人はみな平等。共同食堂ランガル、五つのK、ターバン。</span></span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="confucianism-taoism.html">
+        <span class="idx">09</span>
         <span><span class="cat">CONFUCIANISM &amp; TAOISM</span><span class="ttl">儒教・道教</span><span class="desc">人の道を整える儒教と、自然の道に従う道教。仁・礼・孝と無為自然。</span></span>
         <span class="arrow">→</span>
       </a>
       <a href="../shinto/">
-        <span class="idx">08</span>
+        <span class="idx">10</span>
         <span><span class="cat">SHINTO</span><span class="ttl">神道と神社</span><span class="desc">八百万の神の考え方と歴史、境内のしくみ、全国に広がる神社の16系統、参拝の作法まで。</span></span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="zoroastrianism.html">
+        <span class="idx">11</span>
+        <span><span class="cat">ZOROASTRIANISM</span><span class="ttl">ゾロアスター教</span><span class="desc">善い思い・善い言葉・善い行い。善と悪の戦い、火の神殿、終末と刷新。</span></span>
         <span class="arrow">→</span>
       </a>
     </nav>

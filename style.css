@@ -2,24 +2,24 @@
 :root{
   --bg:#fbfaf8; --ink:#191715; --muted:#77716a; --faint:#aaa39a;
   --line:#e6e1d8; --card:#f4f1eb; --accent:#8a6a3f;
-  --c-abraham:#6f86b8; --c-india:#c27a4a; --c-eastasia:#5f9a7e;
+  --c-abraham:#6f86b8; --c-india:#c27a4a; --c-eastasia:#5f9a7e; --c-iran:#a97cb8;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --bg:#100f0e; --ink:#efece7; --muted:#958f85; --faint:#5f5a52;
     --line:#272421; --card:#181614; --accent:#c9a273;
-    --c-abraham:#8fa6d8; --c-india:#e09a6a; --c-eastasia:#7fbf9f;
+    --c-abraham:#8fa6d8; --c-india:#e09a6a; --c-eastasia:#7fbf9f; --c-iran:#c9a0d8;
   }
 }
 :root[data-theme="dark"]{
   --bg:#100f0e; --ink:#efece7; --muted:#958f85; --faint:#5f5a52;
   --line:#272421; --card:#181614; --accent:#c9a273;
-  --c-abraham:#8fa6d8; --c-india:#e09a6a; --c-eastasia:#7fbf9f;
+  --c-abraham:#8fa6d8; --c-india:#e09a6a; --c-eastasia:#7fbf9f; --c-iran:#c9a0d8;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",system-ui,sans-serif;
   font-size:16px;line-height:1.95;-webkit-font-smoothing:antialiased}
-body.abraham{--fam:var(--c-abraham)} body.india{--fam:var(--c-india)} body.eastasia{--fam:var(--c-eastasia)}
+body.abraham{--fam:var(--c-abraham)} body.india{--fam:var(--c-india)} body.eastasia{--fam:var(--c-eastasia)} body.iran{--fam:var(--c-iran)}
 a{color:inherit}
 .wrap{max-width:48rem;margin:0 auto;padding:0 16px}
 @media (min-width:640px){.wrap{padding:0 28px}}
@@ -81,7 +81,7 @@ ul.plain li strong{color:var(--ink)}
 .cmp{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--line)}
 .cmp div{display:grid;grid-template-columns:7.5em 1fr;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);font-size:.92rem}
 .cmp b{font-family:"Noto Serif JP",serif;font-weight:600;font-size:.9rem;border-left:3px solid var(--fam);padding-left:9px;line-height:1.6;align-self:start}
-.cmp .abraham{--fam:var(--c-abraham)} .cmp .india{--fam:var(--c-india)} .cmp .eastasia{--fam:var(--c-eastasia)}
+.cmp .abraham{--fam:var(--c-abraham)} .cmp .india{--fam:var(--c-india)} .cmp .eastasia{--fam:var(--c-eastasia)} .cmp .iran{--fam:var(--c-iran)}
 .cmp span{color:var(--muted)}
 .insight{margin:16px 0 0;padding:14px 18px;background:var(--card);border-radius:3px;font-size:.92rem}
 .insight::before{content:"見えること　";font-size:.72rem;letter-spacing:.14em;color:var(--accent)}
