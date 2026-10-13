@@ -1,0 +1,91 @@
+/* 宗教ノートの各ページで共通に使うスタイル(入口の index.html は自己完結) */
+:root{
+  --bg:#fbfaf8; --ink:#191715; --muted:#77716a; --faint:#aaa39a;
+  --line:#e6e1d8; --card:#f4f1eb; --accent:#8a6a3f;
+  --c-abraham:#6f86b8; --c-india:#c27a4a; --c-eastasia:#5f9a7e;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#100f0e; --ink:#efece7; --muted:#958f85; --faint:#5f5a52;
+    --line:#272421; --card:#181614; --accent:#c9a273;
+    --c-abraham:#8fa6d8; --c-india:#e09a6a; --c-eastasia:#7fbf9f;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#100f0e; --ink:#efece7; --muted:#958f85; --faint:#5f5a52;
+  --line:#272421; --card:#181614; --accent:#c9a273;
+  --c-abraham:#8fa6d8; --c-india:#e09a6a; --c-eastasia:#7fbf9f;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",system-ui,sans-serif;
+  font-size:16px;line-height:1.95;-webkit-font-smoothing:antialiased}
+body.abraham{--fam:var(--c-abraham)} body.india{--fam:var(--c-india)} body.eastasia{--fam:var(--c-eastasia)}
+a{color:inherit}
+.wrap{max-width:48rem;margin:0 auto;padding:0 16px}
+@media (min-width:640px){.wrap{padding:0 28px}}
+
+.top{display:flex;justify-content:space-between;gap:12px;padding:24px 0 0}
+.back,.sitemark{font-size:.75rem;letter-spacing:.1em;color:var(--muted);text-decoration:none}
+.back:hover,.sitemark:hover{color:var(--ink)}
+
+header.hero{padding:64px 0 16px}
+.eyebrow{font-size:.7rem;letter-spacing:.24em;color:var(--fam,var(--accent));margin:0 0 14px}
+h1{font-family:"Noto Serif JP",serif;font-weight:600;font-size:clamp(2rem,6vw,2.8rem);line-height:1.4;margin:0 0 6px;letter-spacing:.04em}
+.mn-tagline{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(1.05rem,2.6vw,1.4rem);line-height:1.75;letter-spacing:.02em;margin:.1em 0 1.1em;opacity:.85}
+.lead{color:var(--muted);margin:0;max-width:34em}
+
+section{padding:52px 0 0}
+h2{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.28rem;letter-spacing:.04em;margin:0 0 6px}
+.note{color:var(--faint);font-size:.82rem;margin:0 0 22px}
+h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.04rem;margin:26px 0 8px}
+p{margin:0 0 14px}
+strong{font-weight:600}
+
+/* 一目でわかる */
+dl.facts{display:grid;grid-template-columns:auto 1fr;gap:0;margin:0;border-top:1px solid var(--line)}
+dl.facts dt,dl.facts dd{padding:11px 0;border-bottom:1px solid var(--line);margin:0;font-size:.93rem}
+dl.facts dt{color:var(--faint);font-size:.78rem;letter-spacing:.08em;padding-right:22px;white-space:nowrap}
+
+/* 教えのカード */
+.points{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.points li{padding:15px 18px;background:var(--card);border-radius:3px;border-left:3px solid var(--fam,var(--accent))}
+.points b{display:block;font-family:"Noto Serif JP",serif;font-weight:600;margin-bottom:2px}
+.points span{color:var(--muted);font-size:.92rem}
+.quote{margin:18px 0;padding:2px 0 2px 18px;border-left:2px solid var(--fam,var(--accent));font-family:"Noto Serif JP",serif;font-size:1.02rem}
+.quote small{display:block;font-family:"Noto Sans JP",sans-serif;font-size:.75rem;color:var(--faint);margin-top:4px}
+
+/* 規律と実践 */
+.practice{display:grid;grid-template-columns:1fr;gap:12px}
+@media (min-width:640px){.practice{grid-template-columns:1fr 1fr}}
+.practice div{padding:16px 18px;border:1px solid var(--line);border-radius:3px}
+.practice h4{margin:0 0 6px;font-size:.74rem;letter-spacing:.16em;color:var(--fam,var(--accent));font-weight:500}
+.practice p{margin:0;font-size:.92rem;color:var(--muted)}
+.practice p strong{color:var(--ink)}
+
+ul.plain{margin:0;padding-left:1.1em;color:var(--muted)}
+ul.plain li{margin:0 0 8px}
+ul.plain li strong{color:var(--ink)}
+
+.tl{margin-top:30px;font-size:.9rem}
+.tl a{color:var(--fam,var(--accent))}
+
+/* 前後のページ */
+.pager{display:flex;justify-content:space-between;gap:12px;margin-top:64px;padding-top:22px;border-top:1px solid var(--line);font-size:.86rem}
+.pager a{text-decoration:none;color:var(--muted)}
+.pager a:hover{color:var(--ink)}
+
+/* 比較ページ */
+.theme{padding:30px 0 0}
+.theme h2{display:flex;align-items:baseline;gap:12px}
+.theme h2 small{font-family:"Noto Sans JP",sans-serif;font-weight:400;font-size:.7rem;letter-spacing:.18em;color:var(--faint)}
+.cmp{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--line)}
+.cmp div{display:grid;grid-template-columns:7.5em 1fr;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);font-size:.92rem}
+.cmp b{font-family:"Noto Serif JP",serif;font-weight:600;font-size:.9rem;border-left:3px solid var(--fam);padding-left:9px;line-height:1.6;align-self:start}
+.cmp .abraham{--fam:var(--c-abraham)} .cmp .india{--fam:var(--c-india)} .cmp .eastasia{--fam:var(--c-eastasia)}
+.cmp span{color:var(--muted)}
+.insight{margin:16px 0 0;padding:14px 18px;background:var(--card);border-radius:3px;font-size:.92rem}
+.insight::before{content:"見えること　";font-size:.72rem;letter-spacing:.14em;color:var(--accent)}
+@media (max-width:480px){.cmp div{grid-template-columns:1fr;gap:2px}}
+
+footer{margin:80px 0 0;padding:28px 0 64px;border-top:1px solid var(--line)}
+footer p{font-size:.78rem;color:var(--faint);line-height:1.85;margin:0 0 12px}
