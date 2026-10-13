@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>宗教｜まとめノート</title>
+<meta name="description" content="人はなぜ祈るのか。アブラハムの宗教・インドの宗教・東アジアの宗教を見渡し、仏教の思想史・原始仏教・神道と神社のノートへつなぐ、宗教の入口のノート。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbfaf8; --ink:#191715; --muted:#77716a; --faint:#aaa39a;
+    --line:#e6e1d8; --card:#f4f1eb; --accent:#8a6a3f;
+    --c-abraham:#6f86b8; --c-india:#c27a4a; --c-eastasia:#5f9a7e;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#100f0e; --ink:#efece7; --muted:#958f85; --faint:#5f5a52;
+      --line:#272421; --card:#181614; --accent:#c9a273;
+      --c-abraham:#8fa6d8; --c-india:#e09a6a; --c-eastasia:#7fbf9f;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#100f0e; --ink:#efece7; --muted:#958f85; --faint:#5f5a52;
+    --line:#272421; --card:#181614; --accent:#c9a273;
+    --c-abraham:#8fa6d8; --c-india:#e09a6a; --c-eastasia:#7fbf9f;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",system-ui,sans-serif;
+    font-size:16px;line-height:1.95;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:48rem;margin:0 auto;padding:0 16px}
+  @media (min-width:640px){.wrap{padding:0 28px}}
+
+  .top{padding:24px 0 0}
+  .back{font-size:.75rem;letter-spacing:.1em;color:var(--muted);text-decoration:none}
+  .back:hover{color:var(--ink)}
+
+  header.hero{padding:72px 0 24px}
+  .eyebrow{font-size:.7rem;letter-spacing:.24em;color:var(--accent);margin:0 0 14px}
+  h1{font-family:"Noto Serif JP",serif;font-weight:600;font-size:clamp(2rem,6vw,2.8rem);line-height:1.4;margin:0 0 6px;letter-spacing:.04em}
+  .mn-tagline{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(1.05rem,2.6vw,1.4rem);line-height:1.75;letter-spacing:.02em;margin:.1em 0 1.1em;opacity:.85}
+  .lead{color:var(--muted);margin:0;max-width:34em}
+
+  section{padding:56px 0 0}
+  h2{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.3rem;letter-spacing:.04em;margin:0 0 6px}
+  .note{color:var(--faint);font-size:.82rem;margin:0 0 26px}
+  p{margin:0 0 14px}
+
+  .points{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:10px}
+  .points li{padding:14px 18px;background:var(--card);border-radius:3px;font-size:.95rem}
+  .points b{font-family:"Noto Serif JP",serif;font-weight:600;margin-right:.6em}
+
+  .family{margin:0 0 34px;border-left:3px solid var(--fam);padding-left:18px}
+  .family.abraham{--fam:var(--c-abraham)} .family.india{--fam:var(--c-india)} .family.eastasia{--fam:var(--c-eastasia)}
+  .family h3{display:flex;align-items:baseline;gap:12px;font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.08rem;margin:0 0 4px}
+  .family h3 small{font-family:"Noto Sans JP",sans-serif;font-weight:400;font-size:.72rem;letter-spacing:.16em;color:var(--faint)}
+  .family > p{color:var(--muted);font-size:.92rem;margin:0 0 14px}
+  .rel{display:grid;grid-template-columns:1fr;gap:10px}
+  @media (min-width:640px){.rel{grid-template-columns:1fr 1fr}}
+  .rel a{display:block;text-decoration:none;padding:14px 16px;border:1px solid var(--line);border-radius:3px;transition:border-color .2s}
+  .rel a:hover{border-color:var(--fam)}
+  .rel b{display:block;font-family:"Noto Serif JP",serif;font-weight:600;font-size:1rem}
+  .rel span{display:block;font-size:.84rem;color:var(--muted);line-height:1.75;margin-top:4px}
+  .rel em{display:block;font-style:normal;font-size:.72rem;letter-spacing:.08em;color:var(--fam);margin-top:8px}
+
+  .notes{border-top:1px solid var(--line)}
+  .notes a{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:baseline;padding:22px 4px;border-bottom:1px solid var(--line);text-decoration:none}
+  .notes a:hover .ttl{color:var(--accent)}
+  .notes .idx{font-family:"Noto Serif JP",serif;color:var(--faint);font-size:.9rem}
+  .notes .cat{display:block;font-size:.66rem;letter-spacing:.2em;color:var(--faint)}
+  .notes .ttl{display:block;font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.12rem;transition:color .2s}
+  .notes .desc{display:block;font-size:.88rem;color:var(--muted);line-height:1.8;margin-top:4px}
+  .notes .arrow{color:var(--faint)}
+
+  .tl{margin-top:4px;font-size:.9rem;color:var(--muted)}
+  .tl a{color:var(--accent)}
+
+  footer{margin:88px 0 0;padding:28px 0 64px;border-top:1px solid var(--line)}
+  footer p{font-size:.78rem;color:var(--faint);line-height:1.85;margin:0 0 12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a class="back" href="../">← m-note トップ</a></div>
+
+  <header class="hero">
+    <p class="eyebrow">RELIGION</p>
+    <h1>宗教</h1>
+    <p class="mn-tagline">人は、なぜ祈るのか。</p>
+    <p class="lead">死んだらどうなるのか。苦しみはどこから来るのか。どう生きればよいのか。人類はこうした問いに、それぞれの土地で、それぞれの答えを出してきました。信じるためではなく、その答えの違いと重なりを知るためのノートです。</p>
+  </header>
+
+  <section>
+    <h2>宗教とは何か</h2>
+    <p class="note">ひとつの定義に収まらないので、ここでは三つの面から見ておく。</p>
+    <p>「宗教」という言葉は、明治時代に英語の religion の訳語として広まりました。神を信じるものだけを宗教と呼ぶと、仏教の一部や儒教、神道のお祭りがこぼれ落ちてしまいます。そこでこのノートでは、宗教を次の三つの面がからみ合ったものとして見ます。</p>
+    <ul class="points">
+      <li><b>教え</b>世界の成り立ち、苦しみの理由、死の意味についての説明。</li>
+      <li><b>実践</b>祈り、瞑想、儀礼、祭り、戒律。考えるより先に、体でくり返すもの。</li>
+      <li><b>共同体</b>同じ教えと実践を分かち合う人のつながり。暮らしや法、国のかたちにも影響する。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>世界の宗教を見渡す</h2>
+    <p class="note">大きく三つの流れに分けると、関係がつかみやすい。それぞれ、歴史の年表でその宗教だけを表示できます。</p>
+
+    <div class="family abraham">
+      <h3>アブラハムの宗教<small>ABRAHAMIC</small></h3>
+      <p>唯一の神を信じ、預言者を通じて神の言葉が示されたと考える。共通の祖としてアブラハムを仰ぐ。</p>
+      <div class="rel">
+        <a href="../history-timeline/#cat=judaism"><b>ユダヤ教</b><span>神とイスラエルの民の契約。律法（トーラー）を守ることを重んじる。</span><em>年表で見る →</em></a>
+        <a href="../history-timeline/#cat=christianity"><b>キリスト教</b><span>イエスを救い主（キリスト）と信じる。世界で最も信者の多い宗教。</span><em>年表で見る →</em></a>
+        <a href="../history-timeline/#cat=islam"><b>イスラム教</b><span>ムハンマドに下された啓示とされるクルアーンにもとづく。神への帰依と日々の礼拝。</span><em>年表で見る →</em></a>
+      </div>
+    </div>
+
+    <div class="family india">
+      <h3>インドの宗教<small>INDIAN</small></h3>
+      <p>生まれ変わりをくり返す輪廻と、そこからの解放（解脱）をめぐって考えを深めてきた。</p>
+      <div class="rel">
+        <a href="../history-timeline/#cat=hinduism"><b>ヒンドゥー教</b><span>ヴェーダに始まる多様な信仰の総称。多くの神々と、それを貫く一つの真理。</span><em>年表で見る →</em></a>
+        <a href="../history-timeline/#cat=buddhism"><b>仏教</b><span>ブッダが説いた、苦しみの原因を見きわめて手放す道。アジア全体へ広がった。</span><em>年表で見る →</em></a>
+      </div>
+    </div>
+
+    <div class="family eastasia">
+      <h3>東アジアの宗教<small>EAST ASIAN</small></h3>
+      <p>天や自然、祖先とのつながりを大切にし、ひとつの宗教だけを選ぶより、いくつかを重ねて暮らしてきた。</p>
+      <div class="rel">
+        <a href="../history-timeline/#cat=confucian"><b>儒教・道教</b><span>人と社会の秩序を説く儒教と、自然と一体になる生き方を説く道教。</span><em>年表で見る →</em></a>
+        <a href="../history-timeline/#cat=shinto"><b>神道</b><span>山や森、祖先に神を感じる日本の信仰。教えより祭りが中心にある。</span><em>年表で見る →</em></a>
+      </div>
+    </div>
+
+    <p class="tl">このほか、ゾロアスター教・ジャイナ教・シク教や、古代の神々への信仰もあります。<br><a href="../history-timeline/#cat=judaism,christianity,islam,hinduism,buddhism,confucian,shinto,otherrel">宗教の歴史をまとめて年表で見る →</a></p>
+  </section>
+
+  <section>
+    <h2>この中のノート</h2>
+    <p class="note">ひとつの宗教を、深く読むためのノート。</p>
+    <nav class="notes">
+      <a href="../buddhism/">
+        <span class="idx">01</span>
+        <span><span class="cat">BUDDHISM</span><span class="ttl">仏教の思想史</span><span class="desc">インド以前からブッダ、大乗、密教、日本の各宗派まで。「人間はどうすれば救われるのか」への異なる答えとして、自力と他力の軸で読む。</span></span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="../early-buddhism/">
+        <span class="idx">02</span>
+        <span><span class="cat">EARLY BUDDHISM</span><span class="ttl">原始仏教</span><span class="desc">釈迦が説いた最初の教えを、人間の精神の“最適解”として読む。苦と執着からメタ認知や認知バイアスまで、現代の視点で捉え直す。</span></span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="../shinto/">
+        <span class="idx">03</span>
+        <span><span class="cat">SHINTO</span><span class="ttl">神道と神社</span><span class="desc">八百万の神の考え方と歴史、境内のしくみ、全国に広がる神社の16系統、参拝の作法まで。</span></span>
+        <span class="arrow">→</span>
+      </a>
+    </nav>
+  </section>
+
+  <footer>
+    <p>特定の宗教を勧めたり、評価したりするものではありません。専門家ではない個人が学習のために作った個人的なまとめです。内容の正確性を保証するものではありません。</p>
+    <p><a class="back" href="../">← m-note トップ</a></p>
+  </footer>
+</div>
+</body>
+</html>
